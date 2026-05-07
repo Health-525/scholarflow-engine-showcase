@@ -1,4 +1,4 @@
-# timetable-showcase
+# scholarflow-engine-showcase
 
 > ScholarFlow 执行层展示骨架仓库
 >
@@ -24,7 +24,7 @@
 ## 核心模块
 
 ```text
-timetable-showcase/
+scholarflow-engine-showcase/
 ├── .github/workflows/      # 自动化工作流样例
 ├── data/                   # 脱敏后的 JSON 数据样例
 ├── scripts/                # 核心处理脚本骨架
