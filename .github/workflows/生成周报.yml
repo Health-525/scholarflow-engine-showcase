@@ -1,5 +1,8 @@
 name: 生成周报
 
+# Status: showcase-only
+# 说明：公开版仅展示周报复盘职责，不公开完整私有实现。
+
 on:
   schedule:
     - cron: "30 14 * * 0"

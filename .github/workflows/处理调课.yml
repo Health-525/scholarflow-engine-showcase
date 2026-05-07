@@ -1,5 +1,8 @@
 name: 处理调课
 
+# Status: showcase-only
+# 说明：公开版仅展示调课解析与课表更新边界，不公开完整私有实现。
+
 on:
   repository_dispatch:
     types: [adjustments-updated]

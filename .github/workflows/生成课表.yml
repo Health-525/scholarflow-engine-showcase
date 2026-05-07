@@ -1,5 +1,10 @@
 name: 生成课表
 
+# Status: demo-ready
+# 说明：这是公开展示版中最接近真实运行链路的 workflow。
+# 它展示了双仓库 checkout、脚本执行与 Markdown 产物生成的基本结构。
+# 其中仓库名与 token 均为占位示例，不代表真实私有环境配置。
+
 on:
   schedule:
     - cron: "0 22 * * *"
@@ -45,4 +50,4 @@ jobs:
 
       - name: 推送更新后的样例产物
         run: |
-          echo "展示版骨架示例：此处可提交自动生成结果"
+          echo "展示版示例：此处可以提交或保存自动生成的 Markdown 产物"

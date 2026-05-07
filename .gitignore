@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# generated / temp
+*.log
+*.tmp
+*.bak
+*.swp
+node_modules/

@@ -1,5 +1,8 @@
 name: 知识分析-自主研究
 
+# Status: showcase-only
+# 说明：公开版仅展示知识分析与自主研究职责，不公开完整私有实现。
+
 on:
   workflow_dispatch:
 

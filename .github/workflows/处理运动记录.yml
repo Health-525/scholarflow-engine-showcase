@@ -1,5 +1,8 @@
 name: 处理运动记录
 
+# Status: showcase-only
+# 说明：公开版仅展示运动记录聚合职责，不公开完整私有实现。
+
 on:
   repository_dispatch:
     types: [running-updated]

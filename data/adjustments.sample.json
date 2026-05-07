@@ -1,8 +1,11 @@
 [
   {
     "date": "2026-03-12",
-    "original": "算法设计（周二 3-4 节）",
-    "adjusted": "周三 5-6 节",
+    "course": "算法设计",
+    "weekday": 2,
+    "originalPeriods": [3, 4],
+    "adjustedWeekday": 3,
+    "adjustedPeriods": [5, 6],
     "location": "教学楼 B401",
     "reason": "教学安排调整"
   }

@@ -1,5 +1,8 @@
 name: 生成日报
 
+# Status: showcase-only
+# 说明：公开版仅展示日报聚合职责，不公开完整私有实现。
+
 on:
   schedule:
     - cron: "0 14 * * *"
