@@ -1,0 +1,48 @@
+name: 生成课表
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  repository_dispatch:
+    types: [content-push]
+  workflow_dispatch:
+
+concurrency:
+  group: showcase-main-write
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取内容层仓库
+        uses: actions/checkout@v4
+        with:
+          repository: your-org/content-showcase-repo
+          token: ${{ secrets.CONTENT_PUSH_TOKEN }}
+
+      - name: 拉取执行层仓库
+        uses: actions/checkout@v4
+        with:
+          repository: your-org/engine-showcase-repo
+          path: _engine
+          token: ${{ secrets.CONTENT_PUSH_TOKEN }}
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 生成课表样例
+        run: |
+          node _engine/scripts/generate-timetable.js \
+            _engine/data/schedule.sample.json \
+            _engine/data/adjustments.sample.json \
+            09-日常处理/课表-样例.md
+
+      - name: 推送更新后的样例产物
+        run: |
+          echo "展示版骨架示例：此处可提交自动生成结果"

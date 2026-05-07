@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "tz": "Asia/Shanghai",
+    "week1_monday": "2026-03-02"
+  },
+  "periodTimes": {
+    "1": "08:30-09:15",
+    "2": "09:25-10:10",
+    "3": "10:20-11:05"
+  },
+  "courses": [
+    {
+      "title": "数据分析基础",
+      "weekday": 1,
+      "periods": [1, 2],
+      "weeks": "1-16",
+      "location": "教学楼 A201",
+      "teacher": "课程教师"
+    },
+    {
+      "title": "算法设计",
+      "weekday": 2,
+      "periods": [3, 4],
+      "weeks": "1-16",
+      "location": "教学楼 B305",
+      "teacher": "课程教师"
+    }
+  ]
+}

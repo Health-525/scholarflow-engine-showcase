@@ -1,0 +1,14 @@
+name: 处理作业
+
+on:
+  repository_dispatch:
+    types: [assignments-updated]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 说明
+        run: |
+          echo "展示版工作流：解析内容层中的作业 Markdown，更新 JSON，再回写提醒内容"

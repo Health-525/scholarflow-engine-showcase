@@ -1,0 +1,14 @@
+name: 处理调课
+
+on:
+  repository_dispatch:
+    types: [adjustments-updated]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 说明
+        run: |
+          echo "展示版工作流：解析调课记录，更新课表数据，并触发重新生成课表产物"

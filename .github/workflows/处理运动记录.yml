@@ -1,0 +1,14 @@
+name: 处理运动记录
+
+on:
+  repository_dispatch:
+    types: [running-updated]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 说明
+        run: |
+          echo "展示版工作流：从复选框记录生成统计结果与可视化数据"
