@@ -1,10 +1,42 @@
 [
   {
     "id": "a-demo-001",
-    "course": "某数据类课程",
-    "title": "完成第 3 章练习",
-    "deadline": "2026-03-15T15:59:00.000Z",
+    "course": "算法设计",
+    "title": "完成动态规划练习题 1-8",
+    "deadline": "2026-03-14T15:00:00.000Z",
     "done": false,
+    "status": "in_progress",
+    "priority": "high",
     "createdAt": "2026-03-10T08:00:00.000Z"
+  },
+  {
+    "id": "a-demo-002",
+    "course": "学术英语",
+    "title": "整理一页英文文献术语卡片",
+    "deadline": "2026-03-15T13:00:00.000Z",
+    "done": true,
+    "status": "done",
+    "priority": "medium",
+    "createdAt": "2026-03-11T08:30:00.000Z"
+  },
+  {
+    "id": "a-demo-003",
+    "course": "数据分析基础",
+    "title": "根据样例数据完成一次可视化作业",
+    "deadline": "2026-03-16T10:00:00.000Z",
+    "done": false,
+    "status": "pending",
+    "priority": "medium",
+    "createdAt": "2026-03-12T09:00:00.000Z"
+  },
+  {
+    "id": "a-demo-004",
+    "course": "数据分析基础",
+    "title": "补写本周课程复盘摘要",
+    "deadline": "2026-03-17T12:00:00.000Z",
+    "done": false,
+    "status": "pending",
+    "priority": "low",
+    "createdAt": "2026-03-13T07:45:00.000Z"
   }
 ]

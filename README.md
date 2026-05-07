@@ -91,12 +91,19 @@ scholarflow-engine-showcase/
 
 ## 输入 / 输出映射
 
+当前公开版除了最小课表 demo，还补充了更长的状态样例和日报/周报输出样例，方便评委从“单条链路”扩展理解到“系统整体输出能力”。
+
 | 输入 | 处理脚本 | 输出 | 当前状态 |
 |---|---|---|---|
 | `data/schedule.sample.json` + `data/adjustments.sample.json` | `scripts/generate-timetable.js` | `output-examples/timetable-output.md` | `demo-ready` |
 | 内容层作业 Markdown | `scripts/parse_assignments.js` | `data/assignments.sample.json` / 提醒内容 | `showcase-only` |
 | 内容层调课 Markdown | `scripts/parse_adjustments.js` | `data/adjustments.sample.json` | `showcase-only` |
 | 内容层运动记录 Markdown | `scripts/parse_running.js` | `data/running.sample.json` | `showcase-only` |
+
+另外可继续对照这些结果样例：
+
+- [daily-report-output.md](output-examples/daily-report-output.md)
+- [weekly-report-output.md](output-examples/weekly-report-output.md)
 
 `demo-ready` 表示当前公开版提供了最小可验证实现；`showcase-only` 表示当前阶段只公开职责边界，不公开完整实现细节。
 
