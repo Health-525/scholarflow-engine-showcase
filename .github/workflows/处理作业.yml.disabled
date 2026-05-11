@@ -1,0 +1,32 @@
+name: 处理作业
+
+# Status: demo-ready
+# 说明：公开版提供一条可本地验证的作业链路：Markdown 输入 -> JSON 状态 -> 提醒回写。
+
+on:
+  repository_dispatch:
+    types: [assignments-updated]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 生成作业状态与提醒回写
+        run: |
+          node scripts/parse_assignments.js \
+            data/assignments-note.sample.md \
+            data/assignments.sample.json \
+            output-examples/assignments-output.md
+
+      - name: 生成日报摘要
+        run: |
+          node scripts/generate-daily-report.js \
+            data/assignments.sample.json \
+            output-examples/daily-report-output.md
